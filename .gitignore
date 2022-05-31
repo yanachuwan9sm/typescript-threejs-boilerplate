@@ -1,0 +1,7 @@
+# Node artifact files
+node_modules/
+dist/
+.eslintcache
+
+# dotenv environment variable files
+.env
