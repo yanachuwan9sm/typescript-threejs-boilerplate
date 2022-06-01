@@ -6,18 +6,26 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "prod": "webpack --node-env=production",
-    "dev": "webpack --node-env=development --watch"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "lint": "eslint 'src/js/**/*.js'",
+    "lint:fix": "eslint --fix 'src/js/**/*.js'",
+    "stylelint": "stylelint 'src/scss/**/*.scss'",
+    "stylelint:fix": "stylelint --fix 'src/scss/**/*.scss'"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
     "eslint-webpack-plugin": "^3.1.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
@@ -27,6 +35,11 @@
     "stylelint-scss": "^4.2.0",
     "stylelint-webpack-plugin": "^3.3.0",
     "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "three": "^0.141.0"
   }
 }
